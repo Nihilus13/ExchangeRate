@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.gradnleVersion = '3.4.2'
+    ext.kotlinVersion = '1.3.41'
+    ext.recyclerVersion = '1.0.0'
+    ext.cardViewVersion = '1.0.0'
+    ext.okhttpVersion = "4.0.1"
+    ext.lifecycleExtensionVersion = "2.0.0-rc01"
+    ext.appCompatVersion = "1.0.2"
+    ext.workVersion = "2.1.0"
+    ext.gsonVersion = "2.8.5"
+    ext.mockWebServerVersion = "4.0.1"
+    ext.nharmanVersion2 = "2.1.0"
+    ext.mockitoAndroidVersion = "2.21.0"
+
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradnleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
